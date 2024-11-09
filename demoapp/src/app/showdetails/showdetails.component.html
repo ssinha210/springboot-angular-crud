@@ -1,0 +1,31 @@
+<div class="container mt-5">
+    <div class="user-details card shadow-lg">
+      <div class="card-header bg-primary text-white">
+        <h2>User Details</h2>
+      </div>
+      <div class="card-body">
+        
+        <!-- Display user details -->
+        <div *ngIf="user.name && user.mobileno" class="user-info">
+          <h4 class="card-title">{{ user.name }}</h4>
+          <p class="card-text"><strong>Mobile No:</strong> {{ user.mobileno }}</p>
+        </div>
+    
+        <!-- Loading message if user data is not loaded yet -->
+        <div *ngIf="!user.name && !user.mobileno">
+          <div class="alert alert-info">
+            <strong>Loading...</strong> Fetching user details.
+          </div>
+        </div>
+  
+      </div>
+      
+      <!-- Back Button to navigate to home or user list -->
+      <div class="card-footer text-center">
+        <button class="btn btn-warning" (click)="goBack()">
+          <i class="bi bi-arrow-left-circle"></i> Back to User List
+        </button>
+      </div>
+    </div>
+  </div>
+  
