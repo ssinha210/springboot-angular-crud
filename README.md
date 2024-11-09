@@ -20,7 +20,7 @@ The application allows you to perform CRUD operations on a list of users.
 ### Backend:
 - **Spring Boot** (Java)
 - **Spring Data JPA** (For database operations)
-- **H2 Database** (For in-memory database storage)
+- **Mysql Database** (For in-memory database storage)
 
 ### Frontend:
 - **Angular** (Frontend framework)
